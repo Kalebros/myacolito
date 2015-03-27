@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/iconos">
+        <file alias="iconoReport">iconos/breportIcon.png</file>
+        <file alias="iconoPDF">iconos/application-pdf.png</file>
+        <file alias="iconoODT">iconos/application-vnd.oasis.opendocument.text.png</file>
+        <file alias="iconoImpresora">iconos/printer.png</file>
+    </qresource>
+</RCC>

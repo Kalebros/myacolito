@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyAcolitoActividades</class>
+ <widget class="QWidget" name="MyAcolitoActividades">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_6">
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="AcolitoCustomLineEdit" name="searchLine"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QComboBox" name="filtroTipoBox">
+           <item>
+            <property name="text">
+             <string>Todos los tipos</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="filtroDiaBox">
+           <item>
+            <property name="text">
+             <string>Todos los dias</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableView" name="vistaActividades">
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="actividadWidget" native="true">
+      <property name="styleSheet">
+       <string notr="true"> QWidget#actividadWidget
+{
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.5, y2:0.46, stop:0 rgba(155, 122, 212, 255), stop:1 rgba(255, 255, 255, 255));
+   border: 1px solid grey;
+   border-radius: 10px;
+}
+
+QLineEdit#actividadLine
+{ 	
+	
+    border: no;
+	color: rgb(155, 122, 212);
+    
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QTextBrowser#reqBrowser
+{
+ 
+	background-color: rgba(255, 255, 255, 0);
+    border: no;
+    
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QTextBrowser#descBrowser
+{
+ 
+	background-color: rgba(255, 255, 255, 0);
+    border: no;
+    
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QComboBox#tipoComboBox
+{
+	background-color: rgba(255, 255, 255, 0);
+    border: no;  
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QComboBox#tipoComboBox::drop-down
+{
+ border-right: no
+}
+
+QComboBox#lugarComboBox
+{
+	background-color: rgba(255, 255, 255, 0);
+    border: no;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QComboBox#lugarComboBox::drop-down
+{
+ border-right: no
+}
+
+QSpinBox#minimoSpinBox
+{
+	background-color: rgba(255, 255, 255, 0);
+    border: no;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QSpinBox#maximoSpinBox
+{
+	background-color: rgba(255, 255, 255, 0);
+    border: no;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QToolButton" name="vistaButton">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>62</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>62</width>
+             <height>62</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Pulsa para la vista completa de la actividad</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="acolitoRC.qrc">
+             <normaloff>:/acolitos/iconos/vistaDetallada</normaloff>:/acolitos/iconos/vistaDetallada</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>52</width>
+             <height>52</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="AcolitoVariantButton" name="imprimirButton">
+             <property name="toolTip">
+              <string>Imprimir actividad</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="acolitoRC.qrc">
+               <normaloff>:/acolitos/iconos/imprimir</normaloff>:/acolitos/iconos/imprimir</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="AcolitoBinaryToolButton" name="todaJornadaButton">
+             <property name="toolTip">
+              <string>Pulsa para que la actividad sea durante todas las jornadas</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset resource="acolitoRC.qrc">
+               <normaloff>:/acolitos/iconos/actDiaria</normaloff>:/acolitos/iconos/actDiaria</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="AcolitoVariantButton" name="exportButton">
+             <property name="toolTip">
+              <string>Exportar como PDF u ODT (LibreOffice)</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset resource="acolitoRC.qrc">
+               <normaloff>:/acolitos/iconos/exportar</normaloff>:/acolitos/iconos/exportar</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="idLabel">
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+    border: 1px solid grey;
+    border-radius: 5px;
+    
+	color: rgb(255, 255, 255);
+	background-color: rgb(155, 122, 212);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>()</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="actividadLine">
+             <property name="text">
+              <string>Actividad</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="tipoLabel">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Tipo:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="AcolitoTextComboBox" name="tipoComboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="lugarLabel">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Lugar:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="AcolitoTextComboBox" name="lugarComboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>De</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="minimoSpinBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>99999</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>a</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="maximoSpinBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>99999</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>participantes.</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QWidget" name="horarioWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#horarioWidget
+{
+	background-color: rgb(155, 122, 212);
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+
+QLabel#labelDia
+{
+	color: rgb(255, 255, 255);
+}
+
+QLabel#labelInicio
+{
+	color: rgb(255, 255, 255);
+}
+
+QLabel#labelFin
+{
+	color: rgb(255, 255, 255);
+}
+
+QLabel#labelTodasJornadas
+{
+	color: rgb(255, 255, 255);
+}
+
+QComboBox#diaComboBox
+{
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255,0);
+	border: no;
+}
+
+QComboBox#diaComboBox::drop-down
+{
+ border-right: no
+}
+
+
+QTimeEdit#inicioTimeEdit
+{	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255,0);
+	border: no;
+}
+
+QTimeEdit#finTimeEdit
+{
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255,0);
+	border: no;
+}
+</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="labelTodasJornadas">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Durante todas las jornadas</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelDia">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Día:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="AcolitoTextComboBox" name="diaComboBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="labelInicio">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Inicio:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QTimeEdit" name="inicioTimeEdit">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
+              </property>
+              <property name="displayFormat">
+               <string>HH:mm</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labelFin">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Fin:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QTimeEdit" name="finTimeEdit">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="displayFormat">
+               <string>HH:mm</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="descLabel">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Descripción:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="descBrowser">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="reqLabel">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Requisitos:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="reqBrowser">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AcolitoTextComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">acolitotextcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AcolitoCustomLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">acolitocustomlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AcolitoBinaryToolButton</class>
+   <extends>QToolButton</extends>
+   <header>acolitobinarytoolbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AcolitoVariantButton</class>
+   <extends>QToolButton</extends>
+   <header>acolitovariantbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="acolitoRC.qrc"/>
+ </resources>
+ <connections/>
+</ui>

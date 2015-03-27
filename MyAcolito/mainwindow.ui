@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyAcolite</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="myResources.qrc">
+    <normaloff>:/iconos/MyAcolito/iconoApp</normaloff>:/iconos/MyAcolito/iconoApp</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="SlidingStackedWidget" name="stackedWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>620</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPrincipal">
+    <property name="title">
+     <string>Principal</string>
+    </property>
+    <addaction name="actionConectar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuPreferencias">
+    <property name="title">
+     <string>Preferencias</string>
+    </property>
+    <addaction name="actionOpciones"/>
+   </widget>
+   <widget class="QMenu" name="menuAsistentes">
+    <property name="title">
+     <string>Asistentes</string>
+    </property>
+    <addaction name="actionA_adir_asistentes"/>
+    <addaction name="actionAgrupar_asistentes"/>
+    <addaction name="separator"/>
+    <addaction name="actionCategorias_de_asistentes"/>
+   </widget>
+   <widget class="QMenu" name="menuHabitaciones">
+    <property name="title">
+     <string>Habitaciones</string>
+    </property>
+    <addaction name="actionNueva_habitaci_n"/>
+    <addaction name="actionNueva_lista_de_habitaciones"/>
+    <addaction name="separator"/>
+    <addaction name="actionTipos_de_habitaciones"/>
+   </widget>
+   <widget class="QMenu" name="menuActividades">
+    <property name="title">
+     <string>Actividades</string>
+    </property>
+    <addaction name="actionNueva_actividad"/>
+    <addaction name="actionImprimir_actividades_por_dias"/>
+    <addaction name="separator"/>
+    <addaction name="actionTipos_de_actividad"/>
+    <addaction name="actionLocalizaciones"/>
+    <addaction name="separator"/>
+    <addaction name="actionProcesar_carpeta_de_actividades"/>
+   </widget>
+   <widget class="QMenu" name="menuInformes">
+    <property name="title">
+     <string>Informes</string>
+    </property>
+    <widget class="QMenu" name="menuActividades_2">
+     <property name="title">
+      <string>Actividades</string>
+     </property>
+     <addaction name="actionInforme_actividades_por_dias"/>
+     <addaction name="actionResumen_por_categor_as"/>
+     <addaction name="actionResumen_por_lugares"/>
+    </widget>
+    <widget class="QMenu" name="menuAsistentes_2">
+     <property name="title">
+      <string>Asistentes</string>
+     </property>
+     <addaction name="actionAsistentes_por_categorias"/>
+    </widget>
+    <addaction name="menuAsistentes_2"/>
+    <addaction name="menuActividades_2"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de_Qt"/>
+   </widget>
+   <addaction name="menuPrincipal"/>
+   <addaction name="menuAsistentes"/>
+   <addaction name="menuHabitaciones"/>
+   <addaction name="menuActividades"/>
+   <addaction name="menuInformes"/>
+   <addaction name="menuPreferencias"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionConectar"/>
+   <addaction name="separator"/>
+   <addaction name="actionA_adir_asistentes"/>
+   <addaction name="actionAgrupar_asistentes"/>
+   <addaction name="separator"/>
+   <addaction name="actionNueva_habitaci_n"/>
+   <addaction name="actionNueva_lista_de_habitaciones"/>
+   <addaction name="separator"/>
+   <addaction name="actionNueva_actividad"/>
+   <addaction name="separator"/>
+   <addaction name="actionMensajes"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="acolitoToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBar
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(120, 120, 120, 255), stop:1 rgba(174, 174, 174, 255));
+
+ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(120, 120, 120, 255), stop:1 rgba(174, 174, 174, 255));
+}</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionConectar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/iconos/MyAcolito/iconos/network-disconnect.png</normaloff>
+     <activeon>:/iconos/MyAcolito/iconos/network-connect.png</activeon>:/iconos/MyAcolito/iconos/network-disconnect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Conectar</string>
+   </property>
+  </action>
+  <action name="actionOpciones">
+   <property name="text">
+    <string>Preferencias</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/iconos/MyAcolito/iconoSalir</normaloff>:/iconos/MyAcolito/iconoSalir</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionAccion1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/asistentes</normaloff>:/acolitos/iconos/asistentes</iconset>
+   </property>
+   <property name="text">
+    <string>Asistentes</string>
+   </property>
+   <property name="toolTip">
+    <string>Vista de asistentes</string>
+   </property>
+  </action>
+  <action name="actionAccion2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/habitacion</normaloff>:/acolitos/iconos/habitacion</iconset>
+   </property>
+   <property name="text">
+    <string>Habitaciones</string>
+   </property>
+   <property name="toolTip">
+    <string>Vista de habitaciones y alojamiento</string>
+   </property>
+  </action>
+  <action name="actionA_adir_asistentes">
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/addAsistentes</normaloff>:/acolitos/iconos/addAsistentes</iconset>
+   </property>
+   <property name="text">
+    <string>Añadir asistentes</string>
+   </property>
+  </action>
+  <action name="actionAgrupar_asistentes">
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/grupos</normaloff>:/acolitos/iconos/grupos</iconset>
+   </property>
+   <property name="text">
+    <string>Agrupar asistentes</string>
+   </property>
+  </action>
+  <action name="actionNueva_habitaci_n">
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/nuevaHabitacion</normaloff>:/acolitos/iconos/nuevaHabitacion</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva habitación</string>
+   </property>
+   <property name="toolTip">
+    <string>Pulsa para crear una nueva habitacion</string>
+   </property>
+  </action>
+  <action name="actionNueva_lista_de_habitaciones">
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/listaHabitaciones</normaloff>:/acolitos/iconos/listaHabitaciones</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva lista de habitaciones</string>
+   </property>
+   <property name="toolTip">
+    <string>Pulsa para añadir una lista de habitaciones</string>
+   </property>
+  </action>
+  <action name="actionCategorias_de_asistentes">
+   <property name="text">
+    <string>Categorías de asistentes</string>
+   </property>
+   <property name="toolTip">
+    <string>Editar, borrar y añadir nuevas categorías de asistentes</string>
+   </property>
+  </action>
+  <action name="actionTipos_de_habitaciones">
+   <property name="text">
+    <string>Tipos de habitaciones</string>
+   </property>
+  </action>
+  <action name="actionAccion3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/iconos/MyAcolito/iconoApp</normaloff>:/iconos/MyAcolito/iconoApp</iconset>
+   </property>
+   <property name="text">
+    <string>Actividades</string>
+   </property>
+   <property name="toolTip">
+    <string>Vista de actividades</string>
+   </property>
+  </action>
+  <action name="actionTipos_de_actividad">
+   <property name="text">
+    <string>Tipos de actividades</string>
+   </property>
+  </action>
+  <action name="actionLocalizaciones">
+   <property name="text">
+    <string>Localizaciones</string>
+   </property>
+  </action>
+  <action name="actionProcesar_carpeta_de_actividades">
+   <property name="text">
+    <string>Procesar carpeta de actividades</string>
+   </property>
+  </action>
+  <action name="actionNueva_actividad">
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/iconos/MyAcolito/iconoApp</normaloff>:/iconos/MyAcolito/iconoApp</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva actividad</string>
+   </property>
+  </action>
+  <action name="actionImprimir_actividades_por_dias">
+   <property name="icon">
+    <iconset resource="../Acolitos/acolitoRC.qrc">
+     <normaloff>:/acolitos/iconos/imprimir</normaloff>:/acolitos/iconos/imprimir</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimir actividades del día</string>
+   </property>
+  </action>
+  <action name="actionPrueba_de_impresion">
+   <property name="text">
+    <string>Prueba de impresion</string>
+   </property>
+  </action>
+  <action name="actionInforme_actividades_por_dias">
+   <property name="text">
+    <string>Resumen por días</string>
+   </property>
+  </action>
+  <action name="actionResumen_por_categor_as">
+   <property name="text">
+    <string>Resumen por tipos de actividades</string>
+   </property>
+  </action>
+  <action name="actionResumen_por_lugares">
+   <property name="text">
+    <string>Resumen por localizaciones</string>
+   </property>
+  </action>
+  <action name="actionAsistentes_por_categorias">
+   <property name="text">
+    <string>Asistentes por categorías</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_Qt">
+   <property name="text">
+    <string>Acerca de Qt</string>
+   </property>
+  </action>
+  <action name="actionMensajes">
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/iconos/MyAcolito/mensajes</normaloff>:/iconos/MyAcolito/mensajes</iconset>
+   </property>
+   <property name="text">
+    <string>Mensajes</string>
+   </property>
+   <property name="toolTip">
+    <string>Diálogo de mensajes</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SlidingStackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>../Componentes/slidingstackedwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Acolitos/acolitoRC.qrc"/>
+  <include location="myResources.qrc"/>
+  <include location="myResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

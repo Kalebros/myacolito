@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/acolitos/iconos">
+        <file alias="okIcon">iconos/Green Ball.png</file>
+        <file alias="falseIcon">iconos/Orange Ball.png</file>
+        <file alias="buscar">iconos/edit-find.png</file>
+        <file alias="asistentes">iconos/config-users.png</file>
+        <file alias="grupos">iconos/emblem-people.png</file>
+        <file alias="editar">iconos/gtk-edit.png</file>
+        <file alias="addAsistentes">iconos/user-group-new.png</file>
+        <file alias="imprimir">iconos/document-print.png</file>
+        <file alias="habCerrada">iconos/_0015_Padlock.png</file>
+        <file alias="habAbierta">iconos/_0027_Key.png</file>
+        <file alias="noIcon">iconos/gtk-no.png</file>
+        <file alias="yesIcon">iconos/gtk-yes.png</file>
+        <file alias="habitacion">iconos/Home.png</file>
+        <file alias="noReserva">iconos/adept_commit.png</file>
+        <file alias="reserva">iconos/adept_notifier_warning.png</file>
+        <file alias="nuevaHabitacion">iconos/addHome.png</file>
+        <file alias="listaHabitaciones">iconos/addListaHab.png</file>
+        <file alias="editarGrupo">iconos/view-media-artist.png</file>
+        <file alias="separar">iconos/revert.png</file>
+        <file alias="limpiarHab">iconos/restart.png</file>
+        <file alias="vistaDetallada">iconos/view-list-compact-symbolic.png</file>
+        <file alias="actDiaria">iconos/alarm_128x128-32.png</file>
+        <file alias="actTodasJornadas">iconos/android_128x128-32.png</file>
+        <file alias="exportar">iconos/document-export.png</file>
+    </qresource>
+</RCC>

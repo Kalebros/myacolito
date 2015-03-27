@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/iconos">
+        <file alias="addIcono">iconos/add.png</file>
+        <file alias="removeIcono">iconos/list-remove.png</file>
+        <file alias="runIcono">iconos/system-run.png</file>
+    </qresource>
+</RCC>

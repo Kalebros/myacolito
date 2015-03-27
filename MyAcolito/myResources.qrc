@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/iconos/LogDialog">
+        <file>iconos/view-media-artist.png</file>
+        <file alias="servidor">iconos/server-database.png</file>
+        <file alias="usuario">iconos/userLog.png</file>
+        <file alias="add">iconos/add.png</file>
+    </qresource>
+    <qresource prefix="/iconos/MyAcolito">
+        <file>iconos/network-connect.png</file>
+        <file>iconos/network-disconnect.png</file>
+        <file>iconos/remove.png</file>
+        <file alias="eliminar">iconos/window-close.png</file>
+        <file alias="iconoSalir">iconos/application-exit.png</file>
+        <file alias="iconoApp">iconos/dadosERA.png</file>
+        <file alias="iconoScriptA">iconos/stock_script.png</file>
+        <file alias="iconoScriptB">iconos/template_source.png</file>
+        <file alias="mensajes">iconos/help-about.png</file>
+    </qresource>
+</RCC>

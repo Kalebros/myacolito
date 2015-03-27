@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/scripts">
+        <file alias="scriptEvento">eventodb_script.sql</file>
+        <file alias="scriptDatabase">myacolito_script.sql</file>
+        <file alias="scriptProcedures">myacolito_procedures.sql</file>
+        <file alias="scriptTriggers">myacolito_triggers.sql</file>
+    </qresource>
+    <qresource prefix="/iconos">
+        <file alias="iconoModelo">iconos/Green Ball.png</file>
+        <file alias="iconoError">iconos/Red Ball.png</file>
+    </qresource>
+</RCC>

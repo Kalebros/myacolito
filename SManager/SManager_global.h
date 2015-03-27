@@ -1,0 +1,12 @@
+#ifndef SMANAGER_GLOBAL_H
+#define SMANAGER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(SMANAGER_LIBRARY)
+#  define SMANAGERSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define SMANAGERSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SMANAGER_GLOBAL_H
