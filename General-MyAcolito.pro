@@ -9,6 +9,6 @@ SUBDIRS += \
     Databases \
     WizardEvento \
     Acolitos \
-    MyAcolito \
     SManager \
-    AcolitoJSON
+    AcolitoJSON \
+    MyAcolito

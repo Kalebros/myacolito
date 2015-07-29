@@ -27,7 +27,7 @@
 #include <QSignalMapper>
 #include <QAction>
 
-#include <Componentes/SlidingStackedWidget.h>
+#include <Componentes/slidingstackedwidget.h>
 
 /*!
   Gestiona los cambios de pagina en un SlidingStackedWidget

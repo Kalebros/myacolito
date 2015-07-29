@@ -16,23 +16,23 @@ DESTDIR = ../lib
 
 SOURCES += \
     textcombobox.cpp \
-    SlidingStackedWidget.cpp \
     intcheckbox.cpp \
     customlineedit.cpp \
     boolcheckbox.cpp \
     varianttoolbutton.cpp \
     variantpushbutton.cpp \
-    binarytoolbutton.cpp
+    binarytoolbutton.cpp \
+    slidingstackedwidget.cpp
 
 HEADERS += \
     textcombobox.h \
-    SlidingStackedWidget.h \
     intcheckbox.h \
     customlineedit.h \
     boolcheckbox.h \
     varianttoolbutton.h \
     variantpushbutton.h \
-    binarytoolbutton.h
+    binarytoolbutton.h \
+    slidingstackedwidget.h
 unix:!symbian {
     maemo5 {
         target.path = /opt/usr/lib

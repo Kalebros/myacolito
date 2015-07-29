@@ -30,12 +30,12 @@
      <x>0</x>
      <y>0</y>
      <width>620</width>
-     <height>21</height>
+     <height>28</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPrincipal">
     <property name="title">
-     <string>Principal</string>
+     <string>Principa&amp;l</string>
     </property>
     <addaction name="actionConectar"/>
     <addaction name="separator"/>
@@ -67,7 +67,7 @@
    </widget>
    <widget class="QMenu" name="menuActividades">
     <property name="title">
-     <string>Actividades</string>
+     <string>Acti&amp;vidades</string>
     </property>
     <addaction name="actionNueva_actividad"/>
     <addaction name="actionImprimir_actividades_por_dias"/>
@@ -79,11 +79,11 @@
    </widget>
    <widget class="QMenu" name="menuInformes">
     <property name="title">
-     <string>Informes</string>
+     <string>I&amp;nformes</string>
     </property>
     <widget class="QMenu" name="menuActividades_2">
      <property name="title">
-      <string>Actividades</string>
+      <string>A&amp;ctividades</string>
      </property>
      <addaction name="actionInforme_actividades_por_dias"/>
      <addaction name="actionResumen_por_categor_as"/>
@@ -91,7 +91,7 @@
     </widget>
     <widget class="QMenu" name="menuAsistentes_2">
      <property name="title">
-      <string>Asistentes</string>
+      <string>&amp;Asistentes</string>
      </property>
      <addaction name="actionAsistentes_por_categorias"/>
     </widget>
@@ -100,7 +100,7 @@
    </widget>
    <widget class="QMenu" name="menuAyuda">
     <property name="title">
-     <string>Ayuda</string>
+     <string>A&amp;yuda</string>
     </property>
     <addaction name="actionAcerca_de_Qt"/>
    </widget>
@@ -173,12 +173,12 @@
      <activeon>:/iconos/MyAcolito/iconos/network-connect.png</activeon>:/iconos/MyAcolito/iconos/network-disconnect.png</iconset>
    </property>
    <property name="text">
-    <string>Conectar</string>
+    <string>&amp;Conectar</string>
    </property>
   </action>
   <action name="actionOpciones">
    <property name="text">
-    <string>Preferencias</string>
+    <string>&amp;Preferencias</string>
    </property>
   </action>
   <action name="actionSalir">
@@ -187,7 +187,7 @@
      <normaloff>:/iconos/MyAcolito/iconoSalir</normaloff>:/iconos/MyAcolito/iconoSalir</iconset>
    </property>
    <property name="text">
-    <string>Salir</string>
+    <string>&amp;Salir</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+X</string>
@@ -229,7 +229,7 @@
      <normaloff>:/acolitos/iconos/addAsistentes</normaloff>:/acolitos/iconos/addAsistentes</iconset>
    </property>
    <property name="text">
-    <string>Añadir asistentes</string>
+    <string>&amp;Añadir asistentes</string>
    </property>
   </action>
   <action name="actionAgrupar_asistentes">
@@ -238,7 +238,7 @@
      <normaloff>:/acolitos/iconos/grupos</normaloff>:/acolitos/iconos/grupos</iconset>
    </property>
    <property name="text">
-    <string>Agrupar asistentes</string>
+    <string>A&amp;grupar asistentes</string>
    </property>
   </action>
   <action name="actionNueva_habitaci_n">
@@ -247,7 +247,7 @@
      <normaloff>:/acolitos/iconos/nuevaHabitacion</normaloff>:/acolitos/iconos/nuevaHabitacion</iconset>
    </property>
    <property name="text">
-    <string>Nueva habitación</string>
+    <string>&amp;Nueva habitación</string>
    </property>
    <property name="toolTip">
     <string>Pulsa para crear una nueva habitacion</string>
@@ -259,7 +259,7 @@
      <normaloff>:/acolitos/iconos/listaHabitaciones</normaloff>:/acolitos/iconos/listaHabitaciones</iconset>
    </property>
    <property name="text">
-    <string>Nueva lista de habitaciones</string>
+    <string>Nueva &amp;lista de habitaciones</string>
    </property>
    <property name="toolTip">
     <string>Pulsa para añadir una lista de habitaciones</string>
@@ -267,7 +267,7 @@
   </action>
   <action name="actionCategorias_de_asistentes">
    <property name="text">
-    <string>Categorías de asistentes</string>
+    <string>&amp;Categorías de asistentes</string>
    </property>
    <property name="toolTip">
     <string>Editar, borrar y añadir nuevas categorías de asistentes</string>
@@ -275,7 +275,7 @@
   </action>
   <action name="actionTipos_de_habitaciones">
    <property name="text">
-    <string>Tipos de habitaciones</string>
+    <string>&amp;Tipos de habitaciones</string>
    </property>
   </action>
   <action name="actionAccion3">
@@ -295,17 +295,17 @@
   </action>
   <action name="actionTipos_de_actividad">
    <property name="text">
-    <string>Tipos de actividades</string>
+    <string>&amp;Tipos de actividades</string>
    </property>
   </action>
   <action name="actionLocalizaciones">
    <property name="text">
-    <string>Localizaciones</string>
+    <string>&amp;Localizaciones</string>
    </property>
   </action>
   <action name="actionProcesar_carpeta_de_actividades">
    <property name="text">
-    <string>Procesar carpeta de actividades</string>
+    <string>&amp;Procesar carpeta de actividades</string>
    </property>
   </action>
   <action name="actionNueva_actividad">
@@ -314,7 +314,7 @@
      <normaloff>:/iconos/MyAcolito/iconoApp</normaloff>:/iconos/MyAcolito/iconoApp</iconset>
    </property>
    <property name="text">
-    <string>Nueva actividad</string>
+    <string>&amp;Nueva actividad</string>
    </property>
   </action>
   <action name="actionImprimir_actividades_por_dias">
@@ -323,7 +323,7 @@
      <normaloff>:/acolitos/iconos/imprimir</normaloff>:/acolitos/iconos/imprimir</iconset>
    </property>
    <property name="text">
-    <string>Imprimir actividades del día</string>
+    <string>&amp;Imprimir actividades del día</string>
    </property>
   </action>
   <action name="actionPrueba_de_impresion">
@@ -333,27 +333,27 @@
   </action>
   <action name="actionInforme_actividades_por_dias">
    <property name="text">
-    <string>Resumen por días</string>
+    <string>&amp;Resumen por días</string>
    </property>
   </action>
   <action name="actionResumen_por_categor_as">
    <property name="text">
-    <string>Resumen por tipos de actividades</string>
+    <string>Resumen &amp;por tipos de actividades</string>
    </property>
   </action>
   <action name="actionResumen_por_lugares">
    <property name="text">
-    <string>Resumen por localizaciones</string>
+    <string>Resumen por &amp;localizaciones</string>
    </property>
   </action>
   <action name="actionAsistentes_por_categorias">
    <property name="text">
-    <string>Asistentes por categorías</string>
+    <string>&amp;Asistentes por categorías</string>
    </property>
   </action>
   <action name="actionAcerca_de_Qt">
    <property name="text">
-    <string>Acerca de Qt</string>
+    <string>&amp;Acerca de Qt</string>
    </property>
   </action>
   <action name="actionMensajes">

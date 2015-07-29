@@ -7,7 +7,7 @@
 ** http://www.developer.nokia.com/Community/Wiki/Extending_QStackedWidget_for_sliding_page_animations_in_Qt
 ***********************************************************************/
 
-#include "SlidingStackedWidget.h"
+#include "slidingstackedwidget.h"
 
 SlidingStackedWidget::SlidingStackedWidget(QWidget *parent)
     : QStackedWidget(parent)

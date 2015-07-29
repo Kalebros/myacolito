@@ -36,7 +36,7 @@
 #include <Acolitos/addpersonasdialog.h>
 #include <Acolitos/myacolitohabitaciones.h>
 #include <Acolitos/myacolitoactividades.h>
-#include <Componentes/SlidingStackedWidget.h>
+#include <Componentes/slidingstackedwidget.h>
 
 //Libreria BReport
 #include <BReport/libBReport.h>
