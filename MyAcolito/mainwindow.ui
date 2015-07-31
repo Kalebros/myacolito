@@ -30,7 +30,7 @@
      <x>0</x>
      <y>0</y>
      <width>620</width>
-     <height>28</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPrincipal">
@@ -76,6 +76,7 @@
     <addaction name="actionLocalizaciones"/>
     <addaction name="separator"/>
     <addaction name="actionProcesar_carpeta_de_actividades"/>
+    <addaction name="actionProcesar_fichero_JSON"/>
    </widget>
    <widget class="QMenu" name="menuInformes">
     <property name="title">
@@ -368,6 +369,11 @@
     <string>Diálogo de mensajes</string>
    </property>
   </action>
+  <action name="actionProcesar_fichero_JSON">
+   <property name="text">
+    <string>Procesar fichero JSON</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -379,8 +385,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../Acolitos/acolitoRC.qrc"/>
   <include location="myResources.qrc"/>
+  <include location="../Acolitos/acolitoRC.qrc"/>
   <include location="myResources.qrc"/>
  </resources>
  <connections>

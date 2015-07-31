@@ -142,6 +142,12 @@ private slots:
 
     void error(QString mensaje);
 
+    /*!
+      Procesar un archivo JSON con actividades y asistentes
+      */
+
+    void procesarArchivoJSON();
+
 private:
     Ui::MainWindow *ui;
 

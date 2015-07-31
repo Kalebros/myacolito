@@ -200,6 +200,7 @@ void MainWindow::setup()
 
     //Procesado de documentos JSON
     parserJson=new AcolitoJSONParser(this,database);
+    connect(ui->actionProcesar_fichero_JSON,SIGNAL(triggered()),this,SLOT(procesarArchivoJSON()));
 
     //Procesamiento de carpetas y demas
     connect(ui->actionProcesar_carpeta_de_actividades,SIGNAL(triggered()),this,SLOT(procesarCarpeta()));
@@ -365,4 +366,33 @@ void MainWindow::dialogoMensajes()
     MensajesDialog dialogo(this,database);
 
     dialogo.exec();
+}
+
+void MainWindow::procesarArchivoJSON()
+{
+    QString archivo=QFileDialog::getOpenFileName(this,
+                                                 tr("Seleccionar archivo JSON"));
+
+    if(archivo.isEmpty()||archivo.isNull())
+        return;
+
+    //Abrir y leer informacion del archivo JSON
+    QFile jsonFile(archivo);
+
+    if(!jsonFile.open(QFile::ReadOnly | QFile::Text)) {
+        QMessageBox::warning(this,tr("MyAcolito - Error"),tr("No se ha podido abrir el archivo JSON especificado"));
+        return;
+    }
+
+    QJsonDocument codigoJson=QJsonDocument::fromJson(jsonFile.readAll());
+    jsonFile.close();
+
+    if(parserJson->parseJSONDocument(&codigoJson))
+        QMessageBox::information(this,
+                                 tr("MyAcolito - Procesar archivo JSON"),
+                                 tr("Se ha procesado el contenido del archivo"));
+
+    else QMessageBox::warning(this,
+                              tr("MyAcolito - ERROR"),
+                              tr("No se pudo procesar correctamente el contenido del archivo"));
 }
